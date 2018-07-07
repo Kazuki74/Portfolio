@@ -1,0 +1,4 @@
+	<p> <%= @portfolio.title %> </p>
+	<p> <%= @portfolio.subtitle %> </p>
+	<p> <%= @portfolio.body %> </p>
+	<p> <%= image_tag @portfolio.thumb_image unless @portfolio.thumb_image.nil?  %> </p>
