@@ -2,3 +2,5 @@
 <h1> <%= @portfolio.title %> </h1>
 <em> <%= @portfolio.subtitle %> </em>
 <p> <%= @portfolio.body %> </p>
+<p> <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> </p>
+<p> <%= link_to 'Delete', portfolio_path(@portfolio), method: :delete, data: { confirm: "Are you sure?" } %> </p>
