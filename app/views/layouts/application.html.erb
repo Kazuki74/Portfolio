@@ -19,5 +19,9 @@
       <%= link_to "login", new_user_session_path %>
     <% end %>
     <%= yield %>
+    <footer>
+      <hr>
+      <%= debug params %>
+    </footer>
   </body>
 </html>
