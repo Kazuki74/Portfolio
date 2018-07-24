@@ -1,6 +1,8 @@
 class PortfoliosController < ApplicationController
 	# %i~ はハッシュの配列を作成する
 	before_action :set_portfolio, only: %i[show edit update destroy]
+	access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
 
 	def index
 		@items = Portfolio.all
